@@ -159,8 +159,8 @@ export class HitObjectPatternGenerator extends PatternGenerator {
     const is7KPlus1 = this.totalColumns !== 8 || lastColumn !== 0;
 
     // Make sure the last column was not the centre column
-    const isNotCenter = this.totalColumns % 2 === 0
-      || lastColumn !== this.totalColumns / 2;
+    const isNotCenter = this.totalColumns % 2 === 0 ||
+      lastColumn !== this.totalColumns / 2;
 
     if (isCycle && isSingleObject && is7KPlus1 && isNotCenter) {
       /**
@@ -329,11 +329,9 @@ export class HitObjectPatternGenerator extends PatternGenerator {
    * Whether this hit object can generate a note in the special column.
    */
   protected hasSpecialColumn(): boolean {
-    const findClap = (sample: HitSample) =>
-      sample.hitSound === HitSound[HitSound.Clap];
+    const findClap = (sample: HitSample) => sample.hitSound === HitSound[HitSound.Clap];
 
-    const findFinish = (sample: HitSample) =>
-      sample.hitSound === HitSound[HitSound.Finish];
+    const findFinish = (sample: HitSample) => sample.hitSound === HitSound[HitSound.Finish];
 
     return (
       !!this.hitObject.samples.find(findClap) &&
@@ -451,8 +449,7 @@ export class HitObjectPatternGenerator extends PatternGenerator {
         break;
     }
 
-    const findClap = (sample: HitSample) =>
-      sample.hitSound === HitSound[HitSound.Clap];
+    const findClap = (sample: HitSample) => sample.hitSound === HitSound[HitSound.Clap];
 
     if (this.hitObject.samples.find(findClap)) {
       p2 = 1;
@@ -532,8 +529,8 @@ export class HitObjectPatternGenerator extends PatternGenerator {
     const centreVal = this.rng.nextDouble();
     const noteCount = super.getRandomNoteCount(p2, p3);
 
-    const addToCentre = this.totalColumns % 2 === 1
-      && noteCount !== 3 && centreVal > 1 - centreProbability;
+    const addToCentre = this.totalColumns % 2 === 1 &&
+      noteCount !== 3 && centreVal > 1 - centreProbability;
 
     return [noteCount, addToCentre];
   }

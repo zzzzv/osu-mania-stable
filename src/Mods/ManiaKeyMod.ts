@@ -16,6 +16,8 @@ export abstract class ManiaKeyMod implements IMod, IApplicableToConverter {
 
   isRanked = true;
 
+  isUserPlayable = true;
+
   incompatibles = ModBitwise.KeyMod;
 
   applyToConverter(converter: ManiaBeatmapConverter): void {

@@ -13,5 +13,7 @@ export class ManiaFadeIn implements IMod {
 
   isRanked = true;
 
+  isUserPlayable = true;
+
   incompatibles: ModBitwise = ModBitwise.Hidden | ModBitwise.Flashlight;
 }

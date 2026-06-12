@@ -14,6 +14,8 @@ export class ManiaRandom implements IMod, IApplicableToBeatmap {
 
   isRanked = false;
 
+  isUserPlayable = true;
+
   incompatibles: ModBitwise = ModBitwise.None;
 
   applyToBeatmap(beatmap: ManiaBeatmap): void {

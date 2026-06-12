@@ -14,6 +14,8 @@ export class ManiaMirror implements IMod, IApplicableToBeatmap {
 
   isRanked = true;
 
+  isUserPlayable = true;
+
   incompatibles: ModBitwise = ModBitwise.None;
 
   applyToBeatmap(beatmap: ManiaBeatmap): void {

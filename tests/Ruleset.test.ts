@@ -18,7 +18,7 @@ function testRuleset(rulesetName: string): void {
   testBeatmaps(rulesetPath);
 }
 
-async function testBeatmaps(rulesetPath: string): Promise<void> {
+function testBeatmaps(rulesetPath: string): void {
   const beatmapsPath = path.resolve(rulesetPath, './Beatmaps');
   const beatmapFiles = fs.readdirSync(beatmapsPath);
 
@@ -30,7 +30,8 @@ async function testBeatmaps(rulesetPath: string): Promise<void> {
     const attributesData = fs.readFileSync(attributesPath).toString();
     const attributes: IModdedAttributes = JSON.parse(attributesData);
 
-    const decoded = await decoder.decodeFromPath(beatmapPath, false);
+    const content = fs.readFileSync(beatmapPath, 'utf-8');
+    const decoded = decoder.decodeFromString(content);
 
     for (const acronym in attributes) {
       const mods = ruleset.createModCombination(acronym);

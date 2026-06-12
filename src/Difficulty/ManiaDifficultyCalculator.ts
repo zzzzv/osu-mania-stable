@@ -57,8 +57,8 @@ export class ManiaDifficultyCalculator extends DifficultyCalculator<ManiaDifficu
       return new ManiaDifficultyAttributes(mods, 0);
     }
 
-    const starRating = skills[0].difficultyValue
-      * ManiaDifficultyCalculator.STAR_SCALING_FACTOR;
+    const starRating = skills[0].difficultyValue *
+      ManiaDifficultyCalculator.STAR_SCALING_FACTOR;
 
     const attributes = new ManiaDifficultyAttributes(mods, starRating);
 

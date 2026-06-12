@@ -210,8 +210,8 @@ export abstract class PatternGenerator {
     const validate = options.validate || (() => true);
 
     const isValid = (c: number): boolean => {
-      return validate(c) !== false
-        && !patterns.find((p) => p.columnHasObject(c));
+      return validate(c) !== false &&
+        !patterns.find((p) => p.columnHasObject(c));
     };
 
     // Check for the initial column

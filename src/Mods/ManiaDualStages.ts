@@ -14,6 +14,8 @@ export class ManiaDualStages implements IMod, IApplicableToConverter {
 
   isRanked = false;
 
+  isUserPlayable = true;
+
   incompatibles: ModBitwise = ModBitwise.None;
 
   applyToConverter(converter: ManiaBeatmapConverter): void {

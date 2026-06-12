@@ -78,7 +78,7 @@ export default tslint.config(
       '@stylistic/comma-style': ['error', 'last'],
       '@stylistic/dot-location': ['error', 'property'],
       '@stylistic/eol-last': ['error', 'always'],
-      '@stylistic/func-call-spacing': 'error',
+      '@stylistic/function-call-spacing': 'error',
       '@stylistic/function-call-argument-newline': ['error', 'consistent'],
       '@stylistic/function-paren-newline': ['error', 'consistent'],
       '@stylistic/generator-star-spacing': ['error', {
