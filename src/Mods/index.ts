@@ -25,4 +25,5 @@ export { ManiaNoFail } from './ManiaNoFail';
 export { ManiaNoMod } from './ManiaNoMod';
 export { ManiaPerfect } from './ManiaPerfect';
 export { ManiaRandom } from './ManiaRandom';
+export { ManiaScoreV2 } from './ManiaScoreV2';
 export { ManiaSuddenDeath } from './ManiaSuddenDeath';

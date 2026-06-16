@@ -26,6 +26,7 @@ import { ManiaKey9 } from './ManiaKey9';
 import { ManiaRandom } from './ManiaRandom';
 import { ManiaDualStages } from './ManiaDualStages';
 import { ManiaMirror } from './ManiaMirror';
+import { ManiaScoreV2 } from './ManiaScoreV2';
 
 export class ManiaModCombination extends ModCombination {
   get mode(): number {
@@ -60,6 +61,7 @@ export class ManiaModCombination extends ModCombination {
       new ManiaRandom(),
       new ManiaDualStages(),
       new ManiaMirror(),
+      new ManiaScoreV2(),
     ];
   }
 }
